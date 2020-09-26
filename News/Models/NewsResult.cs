@@ -1,4 +1,6 @@
-﻿namespace News.Models
+﻿using System.Collections.Generic;
+
+namespace News.Models
 {
     public class NewsResult
     {

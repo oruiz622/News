@@ -6,8 +6,6 @@
              mc:Ignorable="d"
              x:Class="News.Views.ArticleView">
     <ContentPage.Content>
-        <Label VerticalOptions="Center"
-               HorizontalOptions="Center"
-               Text="Article View!!!"/>
+        <WebView Source="{Binding .}"/>
     </ContentPage.Content>
 </ContentPage>

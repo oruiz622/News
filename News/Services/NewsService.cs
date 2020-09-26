@@ -1,4 +1,10 @@
-﻿namespace News.Services
+﻿using News.Models;
+using Newtonsoft.Json;
+using System.Net;
+using System.Threading.Tasks;
+using System;
+
+namespace News.Services
 {
     public class NewsService
     {
@@ -17,7 +23,7 @@
             return scope switch
             {
                 NewsScope.Headlines => Headlines,
-                NewsScope.Global => global,
+                NewsScope.Global => Global,
                 NewsScope.Local => Local,
                 _ => throw new Exception("Undefined Scope")
             };

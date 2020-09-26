@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using News.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +10,7 @@ namespace News
         public MainShell()
         {
             InitializeComponent();
+            Routing.RegisterRoute("articleview", typeof(ArticleView));
         }
     }
 }

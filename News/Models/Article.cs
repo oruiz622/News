@@ -1,4 +1,6 @@
-﻿namespace News.Models
+﻿using System;
+
+namespace News.Models
 {
     public class Article
     {

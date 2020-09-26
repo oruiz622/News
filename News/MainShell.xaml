@@ -9,13 +9,35 @@
 
     <FlyoutItem Title="Home"
                  Icon="{StaticResource HomeIcon}">
-        <ShellContent Title="Headlines" Icon="{StaticResource HeadlinesIcon}">
-            <ContentPage Title="Headlines"/>
-        </ShellContent>
+        <ShellContent Title="Headlines" Icon="{StaticResource HeadlinesIcon}"
+                      ContentTemplate="{DataTemplate views:HeadLinesView}"/>
 
-        <Tab Title="News" Icon="{StaticResource NewsIcon}">
-            <ContentPage Title="Local"/>
-            <ContentPage Title="Global"/>
+
+        <Tab Title="News" Route="news" Icon="{StaticResource NewsIcon}">
+
+            <ShellContent Title="Local" Route="local">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <views:HeadLinesView>
+                            <x:Arguments>
+                                <x:String>Local</x:String>
+                            </x:Arguments>
+                        </views:HeadLinesView>
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+            <ShellContent Title="Global" Route="global">
+                <ShellContent.ContentTemplate>
+                    <DataTemplate>
+                        <views:HeadLinesView>
+                            <x:Arguments>
+                                <x:String>Global</x:String>
+                            </x:Arguments>
+                        </views:HeadLinesView>
+                    </DataTemplate>
+                </ShellContent.ContentTemplate>
+            </ShellContent>
+            
         </Tab>
     </FlyoutItem>
     <FlyoutItem Title="Settings" Icon="{StaticResource SettingsIcon}">
